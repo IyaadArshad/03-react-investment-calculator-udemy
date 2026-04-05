@@ -16,7 +16,7 @@ function App() {
       prevUserInput => {
         return {
           ...prevUserInput,
-          [inputIdentifier]: newValue
+          [inputIdentifier]: +newValue
         }
       }
     )
