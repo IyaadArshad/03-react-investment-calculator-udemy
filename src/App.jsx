@@ -22,12 +22,15 @@ function App() {
     )
   }
 
+  const inputIsValid = userInput.duration >= 1;
+
 
   return (
     <>
       <Header />
       <UserInput userInput={userInput} handleChange={handleChange} />
-      <Results userInput={userInput}/>
+      {inputIsValid && <Results userInput={userInput} />}
+      {!inputIsValid && <p className="center">Duration must be greater than 0 years</p>}
     </>
   )
 }
